@@ -19,7 +19,7 @@ ROMAN_TO_INT = [
     ('D', 500),
     ('CM', 900), # Special case: 100 before 1000
     ('M', 1000),
-    ('MCM', 1900) # Special case: 100 before 2000
+    ('MCM', 1900), # Special case: 100 before 2000
     ('MCMXCIX', 1999), # Y2K
     ('MMXVIII', 2018), # Beyond
 ]
