@@ -1,5 +1,5 @@
 from calculator import Calculator
-from converters.roman import Roman
+import converters.roman as roman
 import pytest
 
 @pytest.mark.parametrize('test_input,expected', [
@@ -12,7 +12,7 @@ def test_tokenize(test_input, expected):
     """Test tokenize() properly parses input strings.
     TODO: Should number validation happen in tokenize?
     """
-    calculator = Calculator(Roman)
+    calculator = Calculator(roman)
     assert calculator.tokenize(test_input) == expected
 
 @pytest.mark.parametrize('test_input,expected', [
@@ -25,7 +25,7 @@ def test_tokenize(test_input, expected):
 @pytest.mark.skip(reason="Method not implemented yet")
 def test_calculate_simple(test_input, expected):
     """Test calculate() performs basic math from string expression."""
-    calculator = Calculator(Roman)
+    calculator = Calculator(roman)
     assert calculator.calculate(test_input) == expected
 
 @pytest.mark.parametrize('test_input,expected', [
@@ -35,5 +35,5 @@ def test_calculate_simple(test_input, expected):
 @pytest.mark.skip(reason="Method not implemented yet")
 def test_calculate_complex(test_input, expected):
     """Test calculate() observes order of operations."""
-    calculator = Calculator(Roman)
+    calculator = Calculator(roman)
     assert calculator.calculate(test_input) == expected
