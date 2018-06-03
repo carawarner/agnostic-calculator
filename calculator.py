@@ -40,12 +40,15 @@ class Calculator(object):
             terms.append(current_term)
         return terms
 
-    def calculate(self, expression):
-        """Evaluate mathematical expression submitted as a string."""
-        terms = self.tokenize(expression)
+    def convert(self, terms):
+        """Convert any numbers from non-integer to integer representation"""
         for i, term in enumerate(terms):
             if term not in self.OPERATORS:
                 terms[i] = self.converter.to_int(term)
+        return terms
 
-        new_expression = "".join(terms)
+    def calculate(self, expression):
+        """Evaluate mathematical expression submitted as a string."""
+        ints_and_operators = self.convert(self.tokenize(expression))
+        new_expression = "".join(ints_and_operators)
         return eval(new_expression)
