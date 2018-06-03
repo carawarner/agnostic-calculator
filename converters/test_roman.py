@@ -1,4 +1,4 @@
-from converters.roman import Roman
+import converters.roman as roman
 import pytest
 
 # TODO: add test case(s) to cover bad input
@@ -7,16 +7,14 @@ import pytest
 ])
 def test_to_int(test_input, expected):
     """Test to_int() returns an integer given roman numerals."""
-    converter = Roman()
-    assert converter.to_int(test_input) == expected
+    assert roman.to_int(test_input) == expected
 
 @pytest.mark.parametrize('test_input,expected', [
     (1, 'I'),
 ])
 def test_from_int(test_input, expected):
     """Test from_int() returns roman numerals given an integer."""
-    converter = Roman()
-    assert converter.from_int(test_input) == expected
+    assert roman.from_int(test_input) == expected
 
 @pytest.mark.parametrize('test_input,expected', [
     ('IV', True),
@@ -25,4 +23,4 @@ def test_from_int(test_input, expected):
 @pytest.mark.skip(reason="Method not yet implemented")
 def test_validate(test_input, expected):
     """Test validate() returns the appropriate boolean."""
-    assert Roman.validate(test_input) == expected
+    assert roman.validate(test_input) == expected
