@@ -9,7 +9,7 @@ class Calculator(object):
         '/',
         '(',
         ')',
-        '^', # Not Pythonic
+        '^', # Different meaning in Python
         '**'
     }
 
@@ -33,7 +33,7 @@ class Calculator(object):
                 if current_term:
                     terms.append(current_term)
                     current_term = ""
-                terms.append(char)
+                terms.append('**' if char == '^' else char)
             else:
                 current_term += char
         if current_term:
