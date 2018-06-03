@@ -28,7 +28,28 @@ class Roman(object):
 
     def from_int(self, integer):
         """Produce a string representing the input integer in Roman numerals."""
-        pass
+        string = ""
+        numbers = {self.characters[x] : x for x in self.characters}
+        remainder = integer
+        for number, roman in numbers.items():
+            if remainder == 0:
+                break
+            if remainder >= number:
+                char_count = int(remainder/number)
+                string += roman * char_count
+                remainder = remainder % number
+            # The fun cases:
+            if number in [1000, 500] and remainder >= number - 100:
+                string += "C" + roman
+                remainder -= (number - 100)
+            elif number in [100, 50] and remainder >= number - 10:
+                string += "X" + roman
+                remainder -= number - 10
+            elif number in [10, 5] and remainder >= number -1:
+                string += "I" + roman
+                remainder -= number - 1
+
+        return string
 
     def validate(self, string):
         """Verify input string correctly represents a number in Roman numerals.

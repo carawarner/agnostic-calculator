@@ -13,10 +13,10 @@ def test_to_int(test_input, expected):
 @pytest.mark.parametrize('test_input,expected', [
     (1, 'I'),
 ])
-@pytest.mark.skip(reason="Method not yet implemented")
 def test_from_int(test_input, expected):
     """Test from_int() returns roman numerals given an integer."""
-    assert Roman.from_int(test_input) == expected
+    converter = Roman()
+    assert converter.from_int(test_input) == expected
 
 @pytest.mark.parametrize('test_input,expected', [
     ('IV', True),
