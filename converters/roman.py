@@ -12,7 +12,7 @@ def to_int(string):
     """Produce the integer equivalent of a number represented in Roman numerals."""
     assert isinstance(string, str)
     value = 0
-    numerals = [ROMAN_NUMERALS[x] for x in list(string)]
+    numerals = [ROMAN_NUMERALS[x] for x in list(string.upper())]
     for i, numeral in enumerate(numerals):
         if i+1 == len(numerals): # The last number
             value += numeral
