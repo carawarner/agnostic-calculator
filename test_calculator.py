@@ -16,8 +16,8 @@ def test_tokenize(test_input, expected):
 
 
 @pytest.mark.parametrize('test_input,expected', [
-    (['I', '+', 'II'], [1, '+', 2]), # Base case
-    (['i', '+', 'iI'], [1, '+', 2]), # Doublecheck converter is case-insensitive
+    (['I', '+', 'II'], ['1', '+', '2']), # Base case
+    (['i', '+', 'iI'], ['1', '+', '2']), # Doublecheck converter is case-insensitive
 ])
 def test_convert(test_input, expected):
     """Test convert() returns list of terms with roman numerals
@@ -33,7 +33,6 @@ def test_convert(test_input, expected):
     ('III-I', 'II'),    # -
     ('II**III', 'VIII') # **
 ])
-@pytest.mark.skip(reason="Method not implemented yet")
 def test_calculate_simple(test_input, expected):
     """Test calculate() performs basic math from string expression."""
     calculator = Calculator(roman)
