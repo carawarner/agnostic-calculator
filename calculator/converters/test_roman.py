@@ -1,4 +1,4 @@
-import converters.roman as roman
+import calculator.converters.roman as roman
 import pytest
 
 ROMAN_TO_INT = [

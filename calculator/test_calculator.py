@@ -1,5 +1,5 @@
-from calculator import Calculator
-import converters.roman as roman
+from calculator.calculator import Calculator
+import calculator.converters.roman as roman
 import pytest
 
 @pytest.mark.parametrize('test_input,expected', [
