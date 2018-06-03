@@ -52,4 +52,5 @@ def validate(string):
     """Verify input string correctly represents a number in Roman numerals.
     For example, IV is valid while IIII is not, NM is not.
     """
+    # TODO: I'm not implementing this now, but it's worth doing
     pass
