@@ -7,7 +7,6 @@ import pytest
     ('I + II', ['I', '+', 'II']), # Whitespace insensitive
     ('i + iI', ['i', '+', 'iI']), # Hmmm...what should happen here?
 ])
-@pytest.mark.skip(reason="Method not implemented yet")
 def test_tokenize(test_input, expected):
     """Test tokenize() properly parses input strings.
     TODO: Should number validation happen in tokenize?
