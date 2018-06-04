@@ -1,6 +1,6 @@
 # Agnostic Calculator
 
-![Travis](https://travis-ci.com/carawarner/calculator.svg?token=aYRBXZ7uA2bt85y6RMqu&branch=master)
+![Travis](https://travis-ci.com/carawarner/agnostic-calculator.svg?branch=master)
 
 A Python3 library for evaluating mathematical expressions wheren numbers are not expected to be base-10. 
 
