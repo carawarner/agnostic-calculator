@@ -2,7 +2,7 @@
 
 ![Travis](https://travis-ci.com/carawarner/agnostic-calculator.svg?branch=master)
 
-A Python3 library for evaluating mathematical expressions wheren numbers are not expected to be base-10. 
+A Python3 library that parses strings representing mathematical expressions. The `Calculator` takes a `converter` by which means you can specify numerical types other than regular base 10 numbers. There is one converter available: `roman`.
 
 ## How to install
 
