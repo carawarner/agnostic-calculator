@@ -1,6 +1,6 @@
 # Agnostic Calculator
 
-![Travis](https://travis-ci.com/carawarner/agnostic-calculator.svg?branch=master)
+![Travis](https://travis-ci.com/carawarner/agnostic-calculator.svg?branch=master) [![PyPI version](https://badge.fury.io/py/agnostic-calculator.svg)](https://badge.fury.io/py/agnostic-calculator)
 
 A Python3 library that parses strings representing mathematical expressions. The `Calculator` takes a `converter` by which means you can specify numerical types other than regular base 10 numbers. There is one converter available: `roman`.
 
