@@ -14,7 +14,7 @@ pip install agnostic-calculator
 
 _Manually_:
 ```
-git clone git@github.com:carawarner/calculator.git
+git clone git@github.com:carawarner/agnostic-calculator.git
 cd calculator/calculator
 virtualenv -p python3 venv
 source venv/bin/activate
