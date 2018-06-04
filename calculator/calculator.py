@@ -47,7 +47,7 @@ class Calculator(object):
                 terms[i] = str(self.converter.to_int(term))
         return terms
 
-    def calculate(self, expression):
+    def evaluate(self, expression):
         """Evaluate mathematical expression submitted as a string."""
         ints_and_operators = self.convert(self.tokenize(expression))
         new_expression = "".join(ints_and_operators)

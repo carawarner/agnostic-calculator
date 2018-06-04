@@ -35,16 +35,16 @@ def test_convert(test_input, expected):
     ('II**III', 'VIII'), # **
     ('II^IV', 'XVI'),    # ^ pretend it's math not a bitwise operator
 ])
-def test_calculate_simple(test_input, expected):
-    """Test calculate() performs basic math from string expression."""
+def test_evaluate_simple(test_input, expected):
+    """Test evaluate() performs basic math from string expression."""
     calculator = Calculator(roman)
-    assert calculator.calculate(test_input) == expected
+    assert calculator.evaluate(test_input) == expected
 
 @pytest.mark.parametrize('test_input,expected', [
     ('III+V/II*II', 'VIII'), # multiplication then division then addition
     ('(III+V)/(II*II)', 'II'), # inside parens then outside parens
 ])
-def test_calculate_complex(test_input, expected):
-    """Test calculate() observes order of operations."""
+def test_evaluate_complex(test_input, expected):
+    """Test evaluate() observes order of operations."""
     calculator = Calculator(roman)
-    assert calculator.calculate(test_input) == expected
+    assert calculator.evaluate(test_input) == expected
