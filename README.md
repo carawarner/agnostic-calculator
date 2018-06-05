@@ -15,7 +15,7 @@ pip install agnostic-calculator
 _Manually_:
 ```
 git clone git@github.com:carawarner/agnostic-calculator.git
-cd calculator/calculator
+cd agnostic-calculator/calculator
 virtualenv -p python3 venv
 source venv/bin/activate
 pip install -r requirements.txt
@@ -26,7 +26,7 @@ pip install -r requirements.txt
 This libary uses [pytest](https://docs.pytest.org/en/latest/), a powerful but lightweight testing tool for Python.
 
 ```
-cd calculator
+cd agnostic-calculator/calculator
 pytest
 ```
 
